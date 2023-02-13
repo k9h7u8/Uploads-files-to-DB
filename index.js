@@ -151,5 +151,5 @@ app.delete('/files/:id', async (req, res) => {
     });
 });
 
-const port = 3000;
+const port = 3030;
 app.listen(port, console.log(`Server Started on port: ${port}`));
