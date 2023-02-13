@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(methodOverride('_method'));
 
 //connect to mongoDB database
-const connect = mongoose.createConnection(process.env.MONGODB_URI, {
+const connect = mongoose.createConnection(process.env.MONGODB_URI_CLOUD, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }, () => {
@@ -39,7 +39,7 @@ connect.once('open', () => {
 //Create a storage engine
 const storage = new GridFsStorage({
     //Url of mongoDB database
-    url: process.env.MONGODB_URI,
+    url: process.env.MONGODB_URI_CLOUD,
     file: (req, file) => {
         return new Promise((resolve, reject) => {
             crypto.randomBytes(16, (err, buf) => {
