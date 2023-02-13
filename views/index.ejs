@@ -22,16 +22,15 @@
             <div class="col-md-6 m-auto">
                 <h1 class="text-center display-4 my-4">Mongo File Uplaods</h1>
                 <form action="/upload" method="POST" enctype="multipart/form-data" class="row g-2">
-                    <div class="scustom-file mb-3 ">
-                        <input type="file" name="file" id="file" class="custom-file-input">
-                        <!-- <label for="file" class="custom-file-label">Choose File</label> -->
+                    <div class="mb-3 ">
+                        <input type="file" name="file" id="file" class="form-control">
                     </div>
                     <button type="submit" class="btn btn-primary mb-3">Submit</button>
                 </form>
                 <hr>
                 <% if(files){ %>
                     <% files.forEach(function(file){%>
-                        <div class="card card-body mb-3">
+                        <div class="card card-body mb-3" style="width: 18rem;">
                             <% if(file.isImage) { %>
                                 <img src="image/<%=file.filename%>" alt="">
                                 <% }else{%>
