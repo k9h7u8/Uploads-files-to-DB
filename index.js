@@ -7,7 +7,7 @@ const multer = require('multer');
 const { GridFsStorage } = require('multer-gridfs-storage');
 const Grid = require('gridfs-stream');
 const methodOverride = require('method-override');
-require("dotenv").config();
+require('dotenv').config();
 const app = express();
 app.set('view engine', 'ejs');
 
